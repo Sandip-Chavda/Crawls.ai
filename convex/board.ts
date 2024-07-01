@@ -1,5 +1,6 @@
 import { v } from "convex/values";
-import { mutation } from "./_generated/server";
+
+import { mutation, query } from "./_generated/server";
 
 const images = [
   "/placeholders/1.svg",
@@ -19,13 +20,10 @@ export const create = mutation({
     orgId: v.string(),
     title: v.string(),
   },
-
   handler: async (ctx, args) => {
     const identity = await ctx.auth.getUserIdentity();
 
-    if (!identity) {
-      throw new Error("Unauthorized");
-    }
+    if (!identity) throw new Error("Unauthorized.");
 
     const randomImage = images[Math.floor(Math.random() * images.length)];
 

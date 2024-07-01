@@ -1,8 +1,32 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { api } from "@/convex/_generated/api";
 import Image from "next/image";
 import React from "react";
+import { useOrganization } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
+import { useApiMutation } from "@/hooks/use-api-mutation";
+import toast from "react-hot-toast";
 
 const EmptyBoards = () => {
+  const router = useRouter();
+  const { mutate, pending } = useApiMutation(api.board.create);
+  const { organization } = useOrganization();
+
+  const onClick = () => {
+    if (!organization) return;
+    mutate({
+      title: "Untitled",
+      orgId: organization.id,
+    })
+      .then((id) => {
+        router.push(`/board/${id}`);
+        toast.success("Board created");
+      })
+      .catch(() => toast.error("Failed to create board"));
+  };
+
   return (
     <div className="h-full flex flex-col items-center justify-center">
       <Image
@@ -20,7 +44,14 @@ const EmptyBoards = () => {
       </p>
 
       <div className="mt-6">
-        <Button size="lg">Create Board</Button>
+        <Button
+          className="disabled:cursor-not-allowed"
+          disabled={pending}
+          onClick={onClick}
+          size="lg"
+        >
+          Create Board
+        </Button>
       </div>
     </div>
   );

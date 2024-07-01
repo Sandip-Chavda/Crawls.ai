@@ -1,3 +1,7 @@
+### todo
+
+- try to add optional in authorname in schema foe user name schema error
+
 ## needed packeges
 
 - convex for database
