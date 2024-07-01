@@ -1,6 +1,6 @@
-### todo
+## new packeges for me
 
-- try to add optional in authorname in schema foe user name schema error
+- date-fns
 
 ## needed packeges
 
