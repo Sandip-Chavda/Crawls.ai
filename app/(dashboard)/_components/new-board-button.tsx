@@ -4,6 +4,7 @@ import { useApiMutation } from "@/hooks/use-api-mutation";
 import { cn } from "@/lib/utils";
 import { FaPlus } from "react-icons/fa6";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 interface NewBoardButtonProps {
   orgId: string;
@@ -11,6 +12,7 @@ interface NewBoardButtonProps {
 }
 
 const NewBoardButton = ({ orgId, disabled }: NewBoardButtonProps) => {
+  const router = useRouter();
   const { mutate, pending } = useApiMutation(api.board.create);
 
   const onClick = () => {
@@ -20,6 +22,7 @@ const NewBoardButton = ({ orgId, disabled }: NewBoardButtonProps) => {
     })
       .then((id) => {
         toast.success("Board Created successfully");
+        router.push(`/board/${id}`);
       })
       .catch(() => {
         toast.error("Failed to create board");
