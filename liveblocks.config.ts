@@ -1,6 +1,11 @@
-// import { Color, Layer } from "@/types/canvas";
-import { createClient } from "@liveblocks/client";
-import { createRoomContext } from "@liveblocks/react";
+import { Layer, Color } from "@/types/canvas";
+import {
+  createClient,
+  LiveList,
+  LiveMap,
+  LiveObject,
+} from "@liveblocks/client";
+import { createLiveblocksContext, createRoomContext } from "@liveblocks/react";
 
 const client = createClient({
   throttle: 16,
@@ -12,7 +17,7 @@ const client = createClient({
 // `user.presence` property. Must be JSON-serializable.
 type Presence = {
   cursor: { x: number; y: number } | null;
-  // selection: string[];
+  selection: string[];
   // pencilDraft: [x: number, y: number, pressure: number][] | null;
   // penColor: Color | null;
   // ...
@@ -23,8 +28,8 @@ type Presence = {
 // LiveList, LiveMap, LiveObject instances, for which updates are
 // automatically persisted and synced to all connected clients.
 type Storage = {
-  // layers: LiveMap<string, LiveObject<Layer>>;
-  // layerIds: LiveList<string>;
+  layers: LiveMap<string, LiveObject<Layer>>;
+  layerIds: LiveList<string>;
 };
 
 // Optionally, UserMeta represents static/readonly metadata on each user, as
@@ -104,19 +109,19 @@ export const {
 );
 
 // Project-level hooks, use inside `LiveblocksProvider`
-// export const {
-//   suspense: {
-//     LiveblocksProvider,
-//     useMarkInboxNotificationAsRead,
-//     useMarkAllInboxNotificationsAsRead,
-//     useInboxNotifications,
-//     useUnreadInboxNotificationsCount,
+export const {
+  suspense: {
+    LiveblocksProvider,
+    useMarkInboxNotificationAsRead,
+    useMarkAllInboxNotificationsAsRead,
+    useInboxNotifications,
+    useUnreadInboxNotificationsCount,
 
-//     // These hooks can be exported from either context
-//     useUser,
-//     useRoomInfo,
-//   },
-// } = createLiveblocksContext<UserMeta, ThreadMetadata>(client);
+    // These hooks can be exported from either context
+    useUser,
+    useRoomInfo,
+  },
+} = createLiveblocksContext<UserMeta, ThreadMetadata>(client);
 
 /////////////////////////////////////////////////////////////////////////
 ///////---------------------------------------------------------------/////
