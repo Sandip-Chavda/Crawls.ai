@@ -5,6 +5,8 @@ import { LayerType } from "@/types/canvas";
 import React, { memo } from "react";
 import Rectangle from "./rectangle";
 import Ellipse from "./ellipse";
+import Text from "./text";
+import StickyNote from "./sticky-note";
 
 interface LayerPreviewProps {
   id: string;
@@ -21,6 +23,26 @@ const LayerPreview = memo(
     }
 
     switch (layer.type) {
+      case LayerType.Note:
+        return (
+          <StickyNote
+            id={id}
+            layer={layer}
+            onPointerDown={onLayerPointerDown}
+            selectionColor={selectionColor}
+          />
+        );
+
+      case LayerType.Text:
+        return (
+          <Text
+            id={id}
+            layer={layer}
+            onPointerDown={onLayerPointerDown}
+            selectionColor={selectionColor}
+          />
+        );
+
       case LayerType.Elipse:
         return (
           <Ellipse
