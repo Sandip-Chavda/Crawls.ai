@@ -119,14 +119,14 @@ const Toolbar = ({
       </div>
       <div className="bg-white rounded-md flex flex-col items-center p-1.5 shadow-md">
         <ToolButton
-          label="Undo"
+          label="Undo | ctrl + z"
           icon={Undo2}
           onClick={undo}
           // isActive={false}
           isDisabled={!canUndo}
         />
         <ToolButton
-          label="Redo"
+          label="Redo | ctrl + y"
           icon={Redo2}
           onClick={redo}
           // isActive={false}

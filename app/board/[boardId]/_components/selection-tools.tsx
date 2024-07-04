@@ -27,7 +27,7 @@ const SelectionTools = memo(
 
         const indices: number[] = [];
 
-        const arr = liveLayersIds.toArray();
+        const arr = liveLayersIds.toImmutable();
 
         for (let i = 0; i < arr.length; i++) {
           if (selection.includes(arr[i])) {
@@ -48,7 +48,7 @@ const SelectionTools = memo(
 
         const indices: number[] = [];
 
-        const arr = liveLayersIds.toArray();
+        const arr = liveLayersIds.toImmutable();
 
         for (let i = 0; i < arr.length; i++) {
           if (selection.includes(arr[i])) {
@@ -127,7 +127,7 @@ const SelectionTools = memo(
 
         {/* Delete Button */}
         <div className="flex items-center pl-2 ml-2 border-l border-neutral-200">
-          <Hint label="Delete Layer">
+          <Hint label="Delete Layer | delete key">
             <Button
               variant="board"
               size="icon"
