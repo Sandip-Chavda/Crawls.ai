@@ -17,7 +17,10 @@ const UserAvatar = ({ src, name, fallback, borderColor }: UserAvatarProps) => {
       sideOffset={18} //18
       align="center"
     >
-      <Avatar className="h-8 w-8 border-2" style={{ borderColor: borderColor }}>
+      <Avatar
+        className="h-8 w-8 border-[2.8px]"
+        style={{ borderColor: borderColor }}
+      >
         <AvatarImage src={src} />
         <AvatarFallback className="text-xs font-semibold">
           {fallback}
