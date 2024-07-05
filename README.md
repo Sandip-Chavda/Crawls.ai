@@ -6,21 +6,22 @@
 
 - ### Images
 
-| Team Boards | Team Meeting |
+| Team Boards | Board Meeting |
 | ----------- | ------------ |
-| ![image1]() | ![image2]()  |
+| ![teambords](https://github.com/Sandip-Chavda/Crawls.ai/assets/140686165/f5b0de2b-d724-40c4-8334-8e79cb2b2519) | ![Boardmeating](https://github.com/Sandip-Chavda/Crawls.ai/assets/140686165/22dac319-676a-418e-a0de-31ac090c6cdb) |
 
-| Team Meeting | Organization |
+| New Organization | Invite Members |
 | ------------ | ------------ |
-| ![image3]()  | ![image4]()  |
+| ![NewOrg](https://github.com/Sandip-Chavda/Crawls.ai/assets/140686165/50d0e84d-01a0-4969-b9d2-d4e54b2637f1) | ![InviteMemebers](https://github.com/Sandip-Chavda/Crawls.ai/assets/140686165/1093f5f8-9975-4a0e-8982-e3c44536c862) |
 
-| Team Meeting | Delete Board |
+| SignUp | Login |
 | ------------ | ------------ |
-| ![image5]()  | ![image6]()  |
+| ![signup](https://github.com/Sandip-Chavda/Crawls.ai/assets/140686165/8d17e82c-7d97-4efa-bec0-3dee85437f6b) | ![login](https://github.com/Sandip-Chavda/Crawls.ai/assets/140686165/c555968d-ca7d-43e1-9b4d-176af3d1c6d6) |
 
 - ### Video
 
-<!-- https://github.com/Sandip-Chavda/NuPrice_Price-Tracker/assets/140686165/b68bc859-0178-4685-862a-da97430f4d63 -->
+https://github.com/Sandip-Chavda/Crawls.ai/assets/140686165/603d273c-cc96-4398-8be3-d4cc7c987a65
+
 
 ## Key Features
 
