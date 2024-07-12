@@ -1,4 +1,4 @@
-# Crawls [Demo🔗](https://nuprice-pricetracker.vercel.app/)
+# Crawls [Demo🔗](https://crawls.vercel.app/)
 
 - **Crawls** is a state-of-the-art collaborative platform designed to replicate and enhance the core functionalities of **Miro**. Built with Next.js, React.js, and TypeScript, and styled with Tailwind CSS and Shadcn UI, Crawls offers a sleek and responsive user interface. It ensures secure user authentication via Clerk and robust data management with Convex database. Real-time collaboration is powered by Liveblocks, allowing users to seamlessly brainstorm, plan, and execute projects together. Crawls is your go-to solution for efficient and effective online teamwork.
 
