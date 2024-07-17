@@ -47,8 +47,6 @@ https://github.com/Sandip-Chavda/Crawls.ai/assets/140686165/603d273c-cc96-4398-8
 
 ## Tech-Stack & Tools
 
-- **Brightdata for avoid IP blocking or device IP block**
-
 - **Front-End:** React.js, Next.js, TypeScript
 
 - **Styling:** Tailwind CSS, Shadcn UI
